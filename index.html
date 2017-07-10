@@ -14,6 +14,11 @@
 	height: 100%;
 	z-index: -20;
 }
+#canvas_rain {
+	position: absolute; 
+	height: 100%;
+	z-index: -10;
+}
 </style>
 
 <link href="css/default.css" type="text/css" rel="stylesheet">
@@ -26,6 +31,8 @@
 <body>
 <!--canvas 作为背景-->
 <canvas height="620" width="1360" id = "canvas"></canvas>
+<!--用来雨滴效果模拟哭的场景-->
+<canvas id="canvas_rain"></canvas>
 
 <audio autoplay="autoplay" loop="loop" preload="auto">
     <source src="music.mp3" type="audio/mpeg">     
@@ -64,12 +71,12 @@
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					亲爱的，这是我们相爱在一起的时光。
+					oh honey，送你一颗心哈，希望能收下。
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					爱你直到永永远远。<br/>
-					<div class="signature">- 李先生</div>
+					不收它会哭的哈！<br/>
+					<div class="signature">- 文先生</div>
 				</div>
 			</div>
 		</div>
@@ -98,7 +105,7 @@ if (!document.createElement('canvas').getContext) {
 } else {
 	setTimeout(function () {
 		startHeartAnimation();
-	}, 5000);
+	}, 3000);
 
 	timeElapse(together);
 	setInterval(function () {
@@ -110,5 +117,6 @@ if (!document.createElement('canvas').getContext) {
 }
 </script>
 <script type="text/javascript" src="js/star.js"></script>
+<script type="text/javascript" src="js/rain.js"></script>
 </body>
 </html>
