@@ -1,6 +1,9 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<audio autoplay="autoplay" loop="loop" preload="auto">
+    <source src="music.m4a" type="audio/mpeg">     
+</audio>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>real heart</title>
 
@@ -44,10 +47,6 @@
 <canvas height="620" width="1360" id = "canvas"></canvas>
 <!--用来雨滴效果模拟哭的场景-->
 <canvas id="canvas_rain"></canvas>
-
-<audio autoplay="autoplay" loop="loop" preload="auto">
-    <source src="music.m4a" type="audio/mpeg">     
-</audio>
 <div id="mainDiv">
 	<div id="content">
 		<div id="code" >
@@ -85,6 +84,7 @@
 </div>
 
 <script type="text/javascript">
+setTimeout(3000)
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
@@ -107,7 +107,6 @@ if (!document.createElement('canvas').getContext) {
 	setTimeout(function () {
 		startHeartAnimation();
 	}, 3000);
-    debugger;
 	timeElapse(together);
 	setInterval(function () {
 		timeElapse(together);
